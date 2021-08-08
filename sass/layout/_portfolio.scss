@@ -1,0 +1,111 @@
+.portfolio {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.button {
+  min-width: 73;
+  border-radius: 4px;
+  padding: 6px 22px;
+  border: 1px solid transparent;
+  color: var(--main-text-color);
+  background-color: #f5f4fa;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: #ffffff;
+    background-color: var(--accent-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
+}
+.portfolio-button {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.portfolio-button-item:not(:last-child) {
+  margin-right: 30px;
+}
+.portfolio-text {
+  border-left: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  padding: 20px 24px;
+}
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+  margin-top: -30px;
+}
+.portfolio-item {
+  margin-left: 30px;
+  margin-top: 30px;
+  flex-basis: calc(100% / 3 - 90px);
+  background: #ffffff;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+.portfolio-title {
+  margin-bottom: 4px;
+  color: var(--main-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.portfolio-direction {
+  color: #757575;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+}
+/* .portfolio-title:hover,
+.portfolio-title:focus,
+.portfolio-direction:hover,
+.portfolio-direction:focus {
+  color: var(--accent-color);
+} */
+.portfolio-grid-link {
+  display: block;
+}
+.portfolio-grid-overlay {
+  position: relative;
+  overflow: hidden;
+}
+.overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 63px 24px;
+  overflow: auto;
+  transition: transform 500ms linear;
+
+  font-weight: 400px;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+  background: rgba(33, 150, 243, 0.9);
+}
+.portfolio-grid-link:hover .overlay,
+.portfolio-grid-link:focus .overlay {
+  transform: translateY(-100%);
+}
