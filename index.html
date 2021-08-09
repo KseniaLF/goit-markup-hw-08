@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <!-- <header class="header">
+     <header class="header">
         <div class="container">
             <nav class="header-nav">
                 <a href="./index.html" class="logo link">
@@ -35,6 +35,12 @@
                     </li>
                 </ul>
             </nav>
+
+            <button class="burger" data-menu-open>
+                <svg class="burger__icon">
+                    <use href="./images/icons.svg#icon-burger"></use>
+                </svg>
+            </button>
 
             <ul class="header-contact list">
                 <li class="header-contact__item">
@@ -56,7 +62,36 @@
             </ul>
         </div>
 
-    </header> -->
+        <div class="modile-menu" data-menu>
+            <div class="container mobile-menu__container">
+                <button class="close-btn mobile-menu__close-btn" data-menu-close>
+                    <svg class="close-btn__icon" width="11" height="11">
+                        <use href="./images/sprite.svg#icon-close" ></use>
+                    </svg>
+                </button>
+
+                <ul class="nav-list">
+                    <li class="nav-list__item">
+                        <a href="" class="nav-list__link link">
+                            Студия
+                        </a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="" class="nav-list__link link">
+                            Портфолио
+                        </a>
+                    </li>
+                    <li class="nav-list__item">
+                        <a href="" class="nav-list__link link">
+                            Контакты
+                        </a>
+                    </li>
+                   
+                </ul>
+            </div>
+            
+        </div>
+    </header>
 
     <!-- <main class="main">
         Hero
@@ -142,7 +177,7 @@
         </section> -->
 
         <!-- Team -->
-        <section class="section team">
+         <section class="section team">
             <div class="container">
                 <h2 class="title">Наша команда</h2>
                 <ul class="team__list list">
@@ -205,7 +240,25 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/team/olya.jpg" alt="Ольга Репина" width="270" height="260">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/team/team-desktop2.webp 1x, ./images/team/team-desktop2@2x.webp 2x" type="image/webp">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/team/team-desktop2.jpg 1x, ./images/team/team-desktop2@2x.jpg 2x">
+                        
+                            <source media="(min-width: 768px)"
+                                srcset="./images/team/team-tablet2.webp 1x, ./images/team/team-tablet2@2x.webp 2x" type="image/webp">
+                            <source media="(min-width: 768px)" 
+                                srcset="./images/team/team-tablet2.jpg 1x, ./images/team/team-tablet2@2x.jpg 2x">
+                        
+                            <source media="(min-width: 100px)"
+                                srcset="./images/team/team-mobile2.webp 1x, ./images/team/team-mobile2@2x.webp 2x" type="image/webp">
+                            <source media="(min-width: 100px)" 
+                                srcset="./images/team/team-mobile2.jpg 1x, ./images/team/team-mobile2@2x.jpg 2x">
+                        
+                            <img src="#" alt="Ольга Репина">
+                        </picture>
+                    
                         <div class="team__text">
                             <h3 class="team__name">Ольга Репина</h3>
                             <p lang="en" class="team__profession">Frontend Developer</p>
@@ -242,7 +295,25 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/team/nikolay.jpg" alt="Николай Тарасов" width="270" height="260">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/team/team-desktop3.webp 1x, ./images/team/team-desktop3@2x.webp 2x" type="image/webp">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/team/team-desktop3.jpg 1x, ./images/team/team-desktop3@2x.jpg 2x">
+                        
+                            <source media="(min-width: 768px)"
+                                srcset="./images/team/team-tablet3.webp 1x, ./images/team/team-tablet3@2x.webp 2x" type="image/webp">
+                            <source media="(min-width: 768px)" 
+                                srcset="./images/team/team-tablet3.jpg 1x, ./images/team/team-tablet3@2x.jpg 2x">
+                        
+                            <source media="(min-width: 100px)"
+                                srcset="./images/team/team-mobile3.webp 1x, ./images/team/team-mobile3@2x.webp 2x" type="image/webp">
+                            <source media="(min-width: 100px)" 
+                                srcset="./images/team/team-mobile3.jpg 1x, ./images/team/team-mobile3@2x.jpg 2x">
+                        
+                            <img src="#" alt="Николай Тарасов">
+                        </picture>
+
                         <div class="team__text">
                             <h3 class="team__name">Николай Тарасов</h3>
                             <p lang="en" class="team__profession">Marketing</p>
@@ -279,7 +350,25 @@
                         </div>
                     </li>
                     <li class="team__item">
-                        <img src="./images/team/mihail.jpg" alt="Михаил Ермаков" width="270" height="260">
+                        <picture>
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/team/team-desktop4.webp 1x, ./images/team/team-desktop4@2x.webp 2x" type="image/webp">
+                            <source media="(min-width: 1200px)"
+                                srcset="./images/team/team-desktop4.jpg 1x, ./images/team/team-desktop4@2x.jpg 2x">
+                        
+                            <source media="(min-width: 768px)"
+                                srcset="./images/team/team-tablet4.webp 1x, ./images/team/team-tablet4@2x.webp 2x" type="image/webp">
+                            <source media="(min-width: 768px)" 
+                                srcset="./images/team/team-tablet4.jpg 1x, ./images/team/team-tablet4@2x.jpg 2x">
+                        
+                            <source media="(min-width: 100px)"
+                                srcset="./images/team/team-mobile4.webp 1x, ./images/team/team-mobile4@2x.webp 2x" type="image/webp">
+                            <source media="(min-width: 100px)" 
+                                srcset="./images/team/team-mobile4.jpg 1x, ./images/team/team-mobile4@2x.jpg 2x">
+                        
+                            <img src="#" alt="Михаил Ермаков">
+                        </picture>
+                        
                         <div class="team__text">
                             <h3 class="team__name">Михаил Ермаков</h3>
                             <p lang="en" class="team__profession">UI Designer</p>
@@ -318,7 +407,7 @@
                 </ul>
             </div>
 
-        </section>
+        </section> 
 
  <!-- Clients -->
         <!-- <section class="section clients">
@@ -500,6 +589,7 @@
         </div>
     </div> -->
 <script src="./js/modal.js"></script>
+<script src="./js/menu.js"></script>
 </body>
 
 </html>
