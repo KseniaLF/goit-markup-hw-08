@@ -1,0 +1,74 @@
+.portfolio-page {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  margin-bottom: 40px;
+
+  &__item {
+    margin-bottom: 15px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 8px;
+  }
+
+  &__button {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.63;
+    text-align: center;
+    color: $text-color-main;
+    border-style: none;
+    border-radius: 4px;
+    background-color: $background-color-gray;
+    padding: 6px 22px;
+    cursor: pointer;
+
+    transition-property: color, background-color, box-shadow, border-radius;
+    transition-duration: $transition-duration;
+    transition-timing-function: $timing-function;
+
+    &:hover,
+    &:focus {
+      color: $text-color-white;
+      background-color: $background-color-accent;
+      box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+        0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+      border-radius: 4px;
+    }
+
+    &.current {
+      color: $text-color-white;
+      background-color: $background-color-accent;
+    }
+  }
+}
+
+
+@media screen and (min-width: 768px) {
+  .filters {
+    display: flex;
+    margin-bottom: 30px;
+    justify-content: center;
+
+    &__item {
+      margin-bottom: 0;
+    }
+}
+}
+
+@media screen and (min-width: 1200px) {
+  .portfolio-page {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  .filters {
+    margin-bottom: 50px;
+    }
+}

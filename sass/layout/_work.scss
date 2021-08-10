@@ -1,0 +1,62 @@
+@media screen and (max-width: 1199px) {
+  .section--work {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .section--work {
+    padding-top: 47px;
+    padding-bottom: 94px;
+
+    &__title {
+      font-weight: bold;
+      font-size: 36px;
+      line-height: 1.17;
+      text-align: center;
+      color: $text-color-main;
+      margin-bottom: 50px;
+    }
+  }
+
+  .work--container {
+    margin: 0 auto;
+  }
+    
+  .img-container {
+    position: relative;
+    max-width: 370px;
+    min-height: 294px;
+  }
+  
+  .work {
+    display: flex;
+
+    &__image {
+      max-width: 370px;
+      min-height: 294px;
+    }
+  
+    &__title {
+      position: absolute;
+      bottom: 0;
+      font-weight: bold;
+      line-height: 1.14;
+      text-align: center;
+      text-transform: uppercase;
+      color: $text-color-white;
+  
+      width: 100%;
+      min-height: 70px;
+      background: rgba(47, 48, 58, 0.8);
+      padding-top: 27px;
+      padding-bottom: 27px;
+    }
+  
+    &__item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+

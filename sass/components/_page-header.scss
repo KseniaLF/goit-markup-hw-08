@@ -1,0 +1,329 @@
+.header {
+  display: flex;
+  border-bottom: 1px solid #ececec;
+  height: 60px;
+  align-items: center;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    height: 80px;
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+  }
+  &__logo {
+    width: 134px;
+    margin-right: 88px;
+
+    color: $primary-text-color;
+    font-family: $second-font-family;
+
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+
+    @media screen and (min-width: 1200px) {
+      width: 145px;
+      margin-right: 93px;
+      font-size: 26px;
+      line-height: 1.19;
+    }
+  }
+  &__logo--blue {
+    color: $accent-color;
+  }
+
+  &__mobile-open {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    @media screen and (min-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__mobile-svg {
+    width: 40px;
+    height: 40px;
+    fill: #212121;
+  }
+
+  &__conteiner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media screen and (min-width: 768px) {
+      justify-content: left;
+    }
+
+    @media screen and (min-width: 1200px) {
+      justify-content: space-between;
+    }
+  }
+}
+.site-nav {
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  display: flex;
+  width: 294px;
+  justify-content: space-between;
+
+  @media screen and (min-width: 768px) {
+    margin-right: 84px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 0px;
+    padding-left: 0px;
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  &__link {
+    color: $primary-text-color;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__link--active {
+    position: relative;
+  }
+  &__link:hover,
+  &__link:focus,
+  & .site-nav__link--active {
+    color: $accent-color;
+  }
+  &__link--active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -32px;
+
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: $accent-color;
+  }
+}
+
+.contacts {
+  padding-top: 21px;
+  padding-bottom: 21px;
+  width: 138px;
+
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    justify-content: space-between;
+    width: 333px;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-bottom: 0;
+  }
+
+  &__link {
+    color: $grey-color;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      align-items: center;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__link:not(:last-child) {
+    margin-bottom: 10px;
+    @media screen and (min-width: 1200px) {
+      margin-right: 30px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__icon-mail {
+    fill: currentColor;
+    margin-right: 8px;
+    width: 14px;
+    height: 10px;
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 10px;
+      width: 14px;
+      height: 10px;
+    }
+  }
+
+  &__icon-phone {
+    fill: currentColor;
+    margin-right: 8px;
+    width: 10px;
+    height: 14px;
+
+    @media screen and (min-width: 1200px) {
+      margin-right: 10px;
+      width: 10px;
+      height: 16px;
+    }
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+}
+
+.mobile {
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: $white-color;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+
+  &__conteiner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    height: 100vh;
+    padding: 48px 40px;
+  }
+
+  &__close-btn {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+  &.is-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+.mobile-nav {
+  &__menu {
+    list-style: none;
+  }
+
+  &__item {
+    margin-bottom: 32px;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+
+  &__link {
+    display: inline-block;
+    text-decoration: none;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+    color: $primary-text-color;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.mobile-contacts {
+  &__list {
+    margin-bottom: 64px;
+  }
+
+  &__item {
+    margin-top: 32px;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+
+  &__link {
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.16;
+    letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    color: $grey-color;
+  }
+}
+
+.mobile-media {
+  display: flex;
+  flex-wrap: wrap;
+
+  margin-top: -10px;
+
+  &__link {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    color: $accent-color;
+  }
+
+  &__item {
+    position: relative;
+    margin-top: 10px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 20px;
+  }
+
+  &__item:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -10px;
+    width: 0px;
+    height: 22px;
+    border: 1px solid $mobile-item-border;
+  }
+}

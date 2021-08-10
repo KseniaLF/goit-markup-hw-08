@@ -1,63 +1,103 @@
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
-  background-color: #2f303a;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
 
-  & .footer-contact {
-    color: rgba(255, 255, 255, 0.6);
-  }
-  & .container {
-    display: flex;
-  }
+  background-color: #2f303a;
 }
-.footer-logo {
-  margin-bottom: 20px;
+
+.footer-social-container {
+  margin-bottom: 60px;
 }
-.footer-address-item:not(:last-child) {
-  margin-bottom: 9px;
-}
-.address {
-  & .link {
-    font-style: normal;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  }
-  & .link:hover,
-  & .link:focus {
-    color: var(--accent-color);
-  }
-}
-.footer-address {
-  color: #ffffff;
-}
-.footer__right {
-  margin-left: 70px;
-  margin-top: 12px;
-}
-.footer-text-icon {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.14;
+
+.footer-social-container__item {
+  @include font(14px, 700, 1.143);
   letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: #ffffff;
-  margin-bottom: 20px;
-}
-.footer-list-icon {
-  display: flex;
-}
-.footer-link-icon {
-  background-color: rgba(255, 255, 255, 0.1);
-  fill: #ffffff;
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  text-align: center;
 
-  &:hover,
-  &:focus {
-    background-color: var(--accent-color);
+  color: var(--primary-white-color);
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
   }
 }
-.footer-icon-item:not(:last-child) {
-  margin-right: 10px;
+
+.subscription-container__item {
+  margin-bottom: 20px;
+  @include font(14px, 700, 1.143);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  text-align: center;
+
+  color: var(--primary-white-color);
 }
+
+.subscription-form__input {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  padding: 15px 16px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  color: var(--primary-white-color);
+  background-color: #2f303a;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    align-items: center;
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+  }
+}
+
+/*-----Підвал для tablet-версії---*/
+
+@media screen and (min-width: 768px) {
+  .footer-container {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+  }
+  .footer-social-container {
+    margin-left: 165px;
+  }
+  .subscription-container {
+    margin: 0 auto;
+  }
+  .subscription-form__input {
+    width: 450px;
+  }
+}
+
+/*-----Підвал для desktop-версії---*/
+
+@media screen and (min-width: 1200px) {
+  /*--- Контейнер"Присоединяйтесь" ---*/
+
+  .footer-social-container {
+    margin-bottom: 0;
+    margin-left: 70px;
+  }
+  .footer-social-container__item {
+    text-align: start;
+  }
+  /*--Контейнер"Підписка""--*/
+  .subscription-container {
+    margin-right: 0px;
+  }
+  .subscription-container__item {
+    text-align: start;
+  }
+  .subscription-form {
+    display: flex;
+  }
+  .subscription-form__input {
+    width: 358px;
+    margin-bottom: 0;
+    margin-right: 12px;
+  }
+}
+/*-------- Кінець головної сторінки сайту--------*/

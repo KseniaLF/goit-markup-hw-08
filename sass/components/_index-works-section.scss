@@ -1,0 +1,48 @@
+.works-section {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+  padding-bottom: 94px;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 50px;
+    padding-left: 0px;
+  }
+
+  &__link:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+.work-description {
+  position: relative;
+  z-index: -1;
+
+  &__image {
+    width: 370px;
+    height: auto;
+    display: block;
+    //   border: 1px solid transparent;
+  }
+
+  &__text {
+    color: $white-color;
+    background-color: rgba(47, 48, 58, 0.8);
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.14;
+    text-transform: uppercase;
+
+    padding-top: 27px;
+    padding-bottom: 27px;
+    width: 100%;
+    height: 70px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}

@@ -1,14 +1,56 @@
-.logo {
-  color: #000000;
-  font-family: "Raleway", sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+/*--Логотип сайту(Шапка сайту)--*/
+/*-----Логотип сайту для mobile-версії---*/
+%logo {
+  font-family: var(--secondary-font);
+  @include font(24px, 700, 1.17);
   letter-spacing: 0.03em;
+
+  color: #000000;
 }
-.span-web {
+
+.logo {
+  @extend %logo;
+  animation-duration: 500ms;
+}
+
+.logo__item {
   color: var(--accent-color);
 }
-.footer-studio {
-  color: #ffffff;
+
+/*-----Логотип сайту для tablet-версії---*/
+
+@media screen and (min-width: 768px) {
+  .logo {
+    margin-right: 88px;
+  }
+}
+
+/*-----Логотип сайту для desktpo-версії---*/
+
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-right: 93px;
+    @include font(26px, 700, 1.2);
+  }
+}
+
+/*-- Логотип сайту (Підвал) --*/
+
+/*-----Логотип сайту (Підвал) для mobile-версії---*/
+.footer-logo {
+  @extend %logo;
+  display: block;
+  margin-bottom: 20px;
+  text-align: center;
+  color: var(--primary-white-color);
+
+  & .logo__item {
+    color: var(--accent-color);
+  }
+}
+/*-----Логотип сайту (Підвал) для desktop-версії---*/
+@media screen and (min-width: 1200px) {
+  .footer-logo {
+    text-align: start;
+  }
 }

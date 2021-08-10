@@ -1,0 +1,207 @@
+.footer {
+  color: $white-color;
+  background-color: $background-color;
+
+  &__address {
+    @media screen and (max-width: 1199px) {
+      padding-bottom: 60px;
+    }
+  }
+
+  &__logo {
+    text-align: center;
+    // display: block;
+    width: 145px;
+
+    color: $white-color;
+    font-family: $second-font-family;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+  }
+  &__title {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.143;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $white-color;
+  }
+  &__section {
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+      align-items: flex-start;
+      text-align: left;
+      justify-content: space-between;
+    }
+  }
+  &__ipad {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+}
+.footer-contacts {
+  margin-top: 20px;
+  &__link {
+    margin-bottom: 0px;
+    color: $footer-contacts-color;
+    font-family: $primary-font-family;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    font-style: normal;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__item:not(:last-child) {
+    margin-bottom: 8px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 9px;
+    }
+  }
+  &__local {
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: $accent-color;
+  }
+}
+.welcome {
+  display: inline-flex;
+  flex-direction: column;
+  padding: 0;
+  padding-bottom: 60px;
+  min-width: 206px;
+  margin-top: 5px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 70px;
+    padding-bottom: 0;
+    margin-top: 0;
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+  }
+
+  &__icon {
+    width: 20px;
+    height: 20px;
+  }
+  &__link {
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    display: inline-block;
+    border-radius: 50%;
+    fill: $white-color;
+    background-color: rgba(255, 255, 255, 0.1);
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &__link:hover,
+  &__link:focus {
+    background-color: $accent-color;
+  }
+}
+.subscribe {
+  width: 100%;
+  @media screen and (min-width: 1200px) {
+    margin-left: 93px;
+    width: 570px;
+  }
+
+  &__form {
+    margin-top: 20px;
+    display: block;
+    text-align: center;
+
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
+  &__input {
+    width: 100%;
+    height: 50px;
+    padding-left: 16px;
+    margin-bottom: 20px;
+
+    @media screen and (min-width: 480px) {
+      width: 450px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      width: 358px;
+      margin-right: 12px;
+    }
+
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: rgba(255, 255, 255, 0.6);
+
+    background-color: $background-color;
+  }
+  &__input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+  }
+  &__label {
+    position: absolute;
+    margin-left: 16px;
+
+    top: 50%;
+    transform: translateY(-50%);
+
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+
+    color: rgba(255, 255, 255, 0.6);
+  }
+  &__button {
+    display: flex;
+
+    width: 200px;
+    height: 50px;
+    padding: 10px 28px;
+    border: none;
+    margin: 0 auto;
+    z-index: 0;
+
+    align-items: center;
+    font-style: normal;
+    font-weight: bold;
+    line-height: 1.875;
+    letter-spacing: 0.06em;
+    color: $white-color;
+    background-color: $accent-color;
+  }
+  &__icon {
+    margin-left: 10px;
+    width: 24px;
+    height: 24px;
+    fill: $white-color;
+  }
+}

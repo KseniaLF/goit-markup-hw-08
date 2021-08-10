@@ -1,0 +1,101 @@
+.features-section {
+  padding-bottom: 60px;
+  padding-top: 60px;
+
+  @media screen and (min-width: 1200px) {
+    padding-bottom: 94px;
+    padding-top: 94px;
+  }
+
+  &__list {
+    width: 100%;
+    @media screen and (max-width: 767px) {
+      margin-bottom: -30px;
+    }
+
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: -30px;
+      // margin-left: -30px;
+    }
+  }
+  &__item {
+    width: 100%;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 30px;
+    }
+
+    @media screen and (min-width: 768px) {
+      flex-basis: calc((100% - 30px) / 2);
+      margin-top: 30px;
+      // margin-left: 30px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      flex-basis: calc((100% - 90px) / 4);
+    }
+  }
+
+  &__item:nth-child(2n + 1) {
+    @media screen and (min-width: 768px) {
+      margin-right: 30px;
+    }
+  }
+
+  &__item:not(:last-child) {
+    @media screen and (min-width: 1200px) {
+      margin-right: 30px;
+    }
+  }
+
+  &__description {
+    // width: 270px;
+    width: 100%;
+
+    color: $grey-color;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+  }
+  &__subtitle {
+    // width: 270px;
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    @media screen and (min-width: 768px) {
+      text-align: left;
+    }
+  }
+  // &__item:not(:last-child) {
+  //   // margin-right: 30px;
+  //   margin-bottom: 30px;
+  // }
+
+  &__item::before {
+    display: block;
+    content: "";
+    height: 120px;
+    background-color: $second-background;
+    margin-bottom: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  $icons: "antenna", "clock", "diagram", "astronaut";
+
+  @each $iconName in $icons {
+    &__icon-#{$iconName}::before {
+      background-image: url(../images/icons/#{$iconName}.svg);
+      background-size: 70px 70px;
+    }
+  }
+}
